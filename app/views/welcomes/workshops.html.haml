@@ -1,0 +1,32 @@
+%div.workshops
+  %h1 WORKSHOPS & EVENTS
+  %h3 Check out past Travelogue workshops and events!
+
+%div.carousel-color
+
+  .carousel.event-carousel.slide{:id=>"myCarousel", :data => {:ride => "carousel"}}
+    %ol.carousel-indicators
+      %li.active{:data => {:target => "myCarousel", :slide_to => "0"}}
+      %li{:data => {:target => "myCarousel", :slide_to => "1"}}
+      %li{:data => {:target => "myCarousel", :slide_to => "2"}}
+      / %li{:data => {:target => "myCarousel", :slide_to => "3"}}
+
+
+    .carousel-inner
+      .item.active
+        %img{:src => asset_path("southafricanfood.jpg"), :alt => ""}/
+      .item
+        %img{:src => asset_path("cooking_pizza.jpg"), :alt => ""}/
+      / .item
+      /   %img{:src => asset_path("boattrip.jpg"), :alt => ""}/
+      .item
+        %img{:src => asset_path("moroccoboat.jpg"), :alt => ""}/
+
+
+    %a.left.carousel-control{:href => "#myCarousel", :role => "button", :data => {:slide => "prev"}}
+      %span.glyphicon.glyphicon-chevron-left
+      %span.sr-only Previous
+    %a.right.carousel-control{:href => "#myCarousel", :data => {:slide => "next"}}
+      %span.glyphicon.glyphicon-chevron-right
+      %span.sr-only Next
+

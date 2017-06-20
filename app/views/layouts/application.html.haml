@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+    %title Travelogue - Women Travel Groups
+    %link(href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet")
+    = javascript_include_tag 'application', "data-turbolinks-track" => true
+
+    %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+
+    %script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    = stylesheet_link_tag 'application', "data-turbolinks-track" => true
+    = stylesheet_link_tag 'print', media: 'print'
+    %script(src="https://use.fontawesome.com/672df74d4b.js")
+
+
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-top.navbar-custom.navbar-fixed-top{role: "navigation"}
+      .container-fluid
+
+        .navbar-header
+          .pull-left
+            %p.title Travelogue
+
+        / .navbar.navbar-top.navbar-custom.navbar-fixed-top(style='float:none; display: inline-block; text-align: center; background:transparent;')
+
+        .navbar-custom.pull-right
+          %ul.nav.navbar-nav
+            %li= link_to 'About', about_path
+            %li= link_to 'Workshops & Events', workshops_path
+            / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Partners
+            / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Blog
+            %li= link_to "Join the Group", 'https://www.facebook.com/groups/281904978888004/'
+
+
+    = yield
+

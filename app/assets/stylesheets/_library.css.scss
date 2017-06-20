@@ -1,0 +1,35 @@
+@mixin bg-size($size: 100% auto) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    background-size: $size;
+}
+
+$break-small: 550px;
+$break-large: 1050px;
+
+@mixin respond-to($media) {
+    @if $media == handheld {
+        @media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: $break-large) { @content; }
+    }
+}
+
+@mixin background-image($name) {
+  $url: $name;
+  background: image-url($url);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    top: 0px;
+    max-height: 100%;
+    max-width: 100%;
+}
