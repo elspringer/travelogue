@@ -12,4 +12,8 @@ class WelcomesController < ApplicationController
 
   end
 
+  def basques
+
+  end
+
 end

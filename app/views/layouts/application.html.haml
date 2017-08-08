@@ -8,7 +8,7 @@
     %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
     %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
 
-    %script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+
     = stylesheet_link_tag 'application', "data-turbolinks-track" => true
     = stylesheet_link_tag 'print', media: 'print'
     %script(src="https://use.fontawesome.com/672df74d4b.js")
@@ -19,20 +19,27 @@
     .navbar.navbar-top.navbar-custom.navbar-fixed-top{role: "navigation"}
       .container-fluid
 
+
         .navbar-header
           .pull-left
             %p.title Travelogue
 
-        / .navbar.navbar-top.navbar-custom.navbar-fixed-top(style='float:none; display: inline-block; text-align: center; background:transparent;')
 
-        .navbar-custom.pull-right
+
+        .navbar-right
           %ul.nav.navbar-nav
+
             %li= link_to 'About', about_path
             %li= link_to 'Workshops & Events', workshops_path
-            / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Partners
-            / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Blog
-            %li= link_to "Join the Group", 'https://www.facebook.com/groups/281904978888004/'
+            %li.dropdown
+              %a.dropdown-toggle(data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
+                Retreats
+                %b.caret
+              %ul.dropdown-menu
+                %li= link_to "Surf in Basques", basques_path
+                %li= link_to "Chill Hiking Retreat", berlin_path
+            %li= link_to 'Blog', 'https://medium.com/travelogue-co'
 
 
-    = yield
 
+= yield

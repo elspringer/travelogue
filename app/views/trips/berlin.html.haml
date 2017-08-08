@@ -1,0 +1,66 @@
+%div.basques-page
+
+  %div.background-image.carousel-color
+
+    .carousel.event-carousel.slide{:id=>"retreatCarousel", :data => {:ride => "carousel"}}
+      %ol.carousel-indicators
+        %li.active{:data => {:target => "retreatCarousel", :slide_to => "0"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "1"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "2"}}
+
+      .carousel-inner
+        .item.active
+          %img{:src => asset_path("forest-woman.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("camping-women.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("coffee-fire.jpg"), :alt => ""}
+
+
+
+    %div.retreat-center
+      %h1.cover Just Chill Hiking Retreat
+      %h3.cover Gettin' Out of Berlin for a Weekend Getaway
+      %a.btn.btn-primary.btn-lg{"data-target" => "#berlinModal", "data-toggle" => "modal", :type => "button"}
+        Apply to Join!
+      %div#berlinModal.modal.fade{"aria-labelledby" => "berlinModalLabel", :role => "dialog", :tabindex => "-1"}
+        %div.modal-dialog{:role => "document"}
+          %div.modal-content
+            %div.modal-body
+
+              %div.typeform-widget{"data-url" => "https://travelogue1.typeform.com/to/KhxrRc", :style => "width: 100%; height: 500px;"}
+
+              :javascript
+                (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
+              %div{:style => "font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"}
+                powered by
+                %a{:href => "https://www.typeform.com/examples/forms/application/?utm_campaign=KhxrRc&utm_source=typeform.com-9436401-Basic&utm_medium=typeform&utm_content=typeform-embedded-application&utm_term=EN", :style => "color: #999", :target => "_blank"} Typeform
+
+            %div.modal-footer
+              %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+
+
+
+%ul.flex-container.basques-content
+  %li.flex-item-1
+    %h1 Chill Hiking Retreat
+    %h2 August 26-27, 2017 | €300
+    %p Tired of the hustle and unst, unst, unst of Berlin?
+    %p Join us for a weekend retreat outside of the city for some time to be in nature, relax and chill the effe out!
+    %p We will get a fresh perspective on the bird's eye view when we take a walk along a treetop path. Then warm up next to a cosy fire in the evening.
+    %p For those needing some extra self-care and pampering, you can bike to a spa, relax at the lake or join for a hike to an abandoned building. So many choices, never enough weekend.
+    %p Sound like just the thing you need? Us too.
+
+
+  %li.flex-item
+    %h2 Retreat Schedule
+    %div.panel.panel-default
+      %div.panel-heading
+        %h3.panel-title Day 1
+      %div.panel-body Leave Berlin and head to Coconat. Lunch will be served and then we'll have a guided visit of Abandonned Die Chirurgie & Alpine Beelitz Heilstätten. After, we'll grab some bikes and head to the Baum & Zeit to walk on tops of trees. That afternoon, you'll have some free time before dinner and a cosy campfire.
+      %div.panel-heading
+        %h3.panel-title Day 2
+      %div.panel-body Wake up for breakfast and talk about the days activities which will include a bike ride or a trip to the spa. Then we'll have lunch, some free time to visit the lake and relax. Then we'll head back to Berlin.
+
+
+

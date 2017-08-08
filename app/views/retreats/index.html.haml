@@ -1,0 +1,6 @@
+%div.retreats-show
+  - @retreats.each do |retreat|
+    %li= retreat.first_name
+    %li= retreat.last_name
+    %li= retreat.email_address
+    %li= retreat.trip_name

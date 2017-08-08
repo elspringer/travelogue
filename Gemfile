@@ -14,9 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'simple_form'
 
-# gem 'simple_form'
+gem 'bootstrap-sass', '3.0.2.1'
 
 gem 'haml'
 

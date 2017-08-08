@@ -1,0 +1,79 @@
+%div.basques-page
+
+  %div.background-image.carousel-color
+
+    .carousel.event-carousel.slide{:id=>"retreatCarousel", :data => {:ride => "carousel"}}
+      %ol.carousel-indicators
+        %li.active{:data => {:target => "retreatCarousel", :slide_to => "0"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "1"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "2"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "3"}}
+        %li{:data => {:target => "retreatCarousel", :slide_to => "4"}}
+
+
+      .carousel-inner
+        .item.active
+          %img{:src => asset_path("bordeaux.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("women_surfer.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("women_surfer2.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("pays-basque.jpg"), :alt => ""}
+        .item
+          %img{:src => asset_path("land-water.jpg"), :alt => ""}
+
+    %div.retreat-center
+      %h1.cover Retreat in the French Basques
+      %h3.cover One last chance to celebrate summer to the fullest
+      %a.btn.btn-primary.community-button{"data-target" => "#basquesModal", "data-toggle" => "modal", :type => "button"}
+        Apply to Join!
+      %div#basquesModal.modal.fade{"aria-labelledby" => "basquesModalLabel", :role => "dialog", :tabindex => "-1"}
+        %div.modal-dialog{:role => "document"}
+          %div.modal-content
+            %div.modal-body
+              %div.typeform-widget{"data-url" => "https://travelogue1.typeform.com/to/hwK5Bt", :style => "width: 100%; height: 500px;"}
+              :javascript
+                (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
+              %div{:style => "font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"}
+                powered by
+                %a{:href => "https://www.typeform.com/examples/?utm_campaign=hwK5Bt&utm_source=typeform.com-9436401-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN", :style => "color: #999", :target => "_blank"} Typeform
+
+
+            %div.modal-footer
+              %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+
+
+%ul.flex-container.basques-content
+  %li.flex-item-1
+    %h1 Surf Retreat to Basques Country
+    %h2 September 20-25, 2017 | €700
+    %p You've got six days to travel with six other women. Some may be strangers but after a few days, you'll become a traveling tribe.
+    %p You'll land in Bordeaux where you'll explore the city as a local, practice your French, dive into the food culture and do your best to get a little lost.
+    %p From there, you'll head to Hendaye near the border of Spain. Hendaye is a surfer paradise in the Southwest of France that has a little Spanish flavor.
+    %p Over the next few days you'll learn how to surf from a man named Laurent, relax on the beach and practice your yoga moves.
+    %p When you've finally triumphed hopping onto a surfboard, you'll venture to Saint-Jean-de-Luz, the darling of Basques country! Here the positivity from learning something new will continue to flow like the French wine you'll surely be sipping on.
+    %p As all great things end, you'll head back to Bordeaux or wherever you are off to next wrapping up a memorable trip with memorable women.
+
+
+  %li.flex-item
+    %h2 Retreat Schedule
+    %div.panel.panel-default
+      %div.panel-heading
+        %h3.panel-title Day 1
+      %div.panel-body Leave Berlin and fly to Bordeaux. From there, we'll hope on a train to Hendaye to enjoy some relaxation and a nice dinner.
+      %div.panel-heading
+        %h3.panel-title Day 2
+      %div.panel-body In Hendaye, we'll rise early to start surf lessons and enjoy some time to sit on the beach, do some yoga and explore Hendaye. In the afternoon, we'll toast one another during a wine tour.
+      %div.panel-heading
+        %h3.panel-title Day 3
+      %div.panel-body Wake up early for the second surf lesson. Then it's a day trip to Saint Jean de Luz.
+      %div.panel-heading
+        %h3.panel-title Day 4
+      %div.panel-body One last surfing lesson before we head to Spain for Tapas. After we get back, we'll head to Bordeux to finish up our travels.
+      %div.panel-heading
+        %h3.panel-title Day 5
+      %div.panel-body An entire day to adventure around Bordeaux.
+      %div.panel-heading
+        %h3.panel-title Day 6
+      %div.panel-body Head to the airport early to go home.

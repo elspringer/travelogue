@@ -1,18 +1,8 @@
 
 %div.flex.row
   %div.photo
-    / .navbar.navbar-top.navbar-custom.navbar-fixed-top(style='float:none; display: inline-block; text-align: center; background:transparent;')
-
-    /   .navbar-custom.pull-right
-    /     %ul.nav.navbar-nav(style='float:none; display: inline-block; text-align: center;')
-    /       %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;')= link_to 'About', about_path
-    /       %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Workshops & Events
-    /       %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Partners
-    /       / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;') Blog
-    /       / %li(style='color: black; padding: 10px 20px 10px 20px; display: inline-block;')= link_to 'Contact Us', contact_path
-
-
-    %p A Travel Community For Women
+    %div.logo
+      %img{:src => asset_path("travelogue-full.png")}
 
 
 / %div.main
@@ -22,21 +12,25 @@
 
 
 %div.below-main
-  %h3 Travelogue is a tight-knit social group of women who enjoy traveling and cosy, intimate experiences.
-  %input.community-button(type="button" value="Join the Community" onclick="location.href = 'https://www.facebook.com/groups/281904978888004/';")
+  %h3 Travelogue designs cozy, unique travel experiences for a social community of adventurous women.
+  %input.community-button(type="button" value="Join the Community!" onclick="location.href = 'https://www.facebook.com/groups/281904978888004/';")
 
-%div.row.more-info
-  .col-md-3.icon
-    %i.fa.fa-hand-peace-o.fa-3x.ico(style='text-align: center;')
-    %h3 Gatherings
-    %p Get to know other women and become part of a community.
-  .col-md-3.icon
-    %i.fa.fa-female.fa-3x.ico
-    %h3 Workshops
-    %p Explore your city with our unique experiences and workshops.
-  .col-md-3.icon
-    %i.fa.fa-rocket.fa-3x.ico
-    %h3 Retreats
-    %p Get out of the Berlin box-ring-thing for shared purpose retreats and a different atmosphere.
+%div
+  %ul.flex-container
+    %li.flex-item
+      %h3.homepage-boxes
+        = link_to 'Surf in the French Basques', basques_path
+      %div.image-thumbs
+        %img.thumbs{:src => asset_path("bordeaux.jpg")}
+    %li.flex-item
+      %h3.homepage-boxes
+        = link_to 'Yoga Retreat Outside of Berlin', berlin_path
+      %div.image-thumbs
+        %img.thumbs{:src => asset_path("women_surfer2.jpg")}
+    %li.flex-item
+      %h3.homepage-boxes
+        = link_to 'Workshops', workshops_path
+      %div.image-thumbs
+        %img.thumbs{:src => asset_path("moroccoboat.jpg")}
 
 

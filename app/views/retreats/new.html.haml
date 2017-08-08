@@ -1,0 +1,14 @@
+.retreat-popup
+  .well
+    %div.retreat-form
+      = form_for @retreat do |f|
+        = f.label :first_name, "First Name"
+        = f.text_field :first_name
+        = f.label :last_name, "Last Name"
+        = f.text_field :last_name, label: "Last Name"
+        = f.label :email, "Email Address"
+        = f.text_field :email, label: "Email address"
+        = f.hidden_field :trip_name, value: "Basque"
+        %br
+        %br
+        = f.submit "Let's Go!", class: "btn btn-primary"
