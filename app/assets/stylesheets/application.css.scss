@@ -167,9 +167,12 @@ body {
   .workshops {
     text-align: center;
     padding-top: 75px;
+    margin: auto;
+    max-width: 70%;
     h3 {
       padding-top: 25px;
       padding-bottom: 25px;
+      text-align:center;
     }
   }
   .carousel-color {
@@ -191,6 +194,9 @@ body {
     .event-carousel img {
       height: auto;
       width: 100%;
+    }
+    .carousel-inner .item img {
+      height: 500px;
     }
     .community-button {
       margin-top: 75px;
